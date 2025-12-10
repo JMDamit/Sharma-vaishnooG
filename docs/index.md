@@ -79,4 +79,3 @@ _Scan QR code to view digital menu_
 ---
 
 © Sharma Vaishnoo Dhabba
-
