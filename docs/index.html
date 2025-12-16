@@ -1,133 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Sharma Vaishnoo Dhaba – Menu</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Sharma Vaishnoo Dhaba – Menu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: "Segoe UI", Tahoma, sans-serif;
-            background: linear-gradient(#fbe9d7, #f5f0eb);
-            color: #2c2c2c;
-        }
+<style>
+    body{
+        margin:0;
+        font-family: "Segoe UI", Tahoma, sans-serif;
+        background: linear-gradient(#fbe9d7, #f5f0eb);
+        color:#2c2c2c;
+    }
 
-        .container {
-            max-width: 850px;
-            margin: auto;
-            padding: 15px;
-        }
+    .container{
+        max-width:850px;
+        margin:auto;
+        padding:15px;
+    }
 
-        /* HEADER */
-        .header {
-            background: linear-gradient(135deg, #b71c1c, #d32f2f);
-            color: white;
-            padding: 25px;
-            border-radius: 18px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-            margin-bottom: 25px;
-        }
+    /* Header */
+    .header{
+        background: linear-gradient(135deg,#b71c1c,#d32f2f);
+        color:white;
+        border-radius:20px;
+        padding:30px;
+        text-align:center;
+        margin-bottom:25px;
+        box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    }
+    .header h1{
+        margin:0;
+        font-size:38px;
+        letter-spacing:2px;
+    }
+    .tags span{
+        background:#ffcccb;
+        padding:8px 15px;
+        border-radius:20px;
+        margin:5px;
+        display:inline-block;
+        font-size:14px;
+        color:#7c0000;
+    }
+    .date{
+        margin-top:10px;
+        font-size:14px;
+    }
 
-        .title {
-            font-size: 34px;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
+    /* Menu Card */
+    .menu-box{
+        background:white;
+        padding:20px;
+        border-radius:15px;
+        margin-bottom:25px;
+        box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    }
+    .menu-title{
+        font-size:24px;
+        margin-bottom:15px;
+        padding-left:10px;
+        border-left:6px solid #2ecc71;
+        font-weight:bold;
+    }
 
-        .tags span {
-            background: rgba(255,255,255,0.25);
-            padding: 6px 12px;
-            border-radius: 20px;
-            margin-right: 5px;
-            font-size: 13px;
-            display: inline-block;
-        }
+    .item{
+        display:flex;
+        justify-content:space-between;
+        padding:10px 0;
+        border-bottom:1px solid #eee;
+        font-size:18px;
+    }
 
-        .date {
-            font-size: 13px;
-            margin-top: 8px;
-            opacity: 0.9;
-            text-align: right;
-        }
-
-        /* MENU SECTION */
-        .section {
-            background: white;
-            padding: 20px;
-            border-radius: 16px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-            margin-bottom: 25px;
-        }
-
-        .section-title {
-            font-size: 22px;
-            font-weight: 700;
-            border-left: 6px solid #2ecc71;
-            padding-left: 10px;
-            margin-bottom: 20px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 16px;
-        }
-
-        table tr {
-            border-bottom: 1px solid #ddd;
-        }
-
-        table td {
-            padding: 10px 5px;
-        }
-
-        .price {
-            font-weight: bold;
-            text-align: right;
-        }
-    </style>
+    .footer{
+        text-align:center;
+        font-size:14px;
+        margin:40px 0;
+        color:#555;
+    }
+</style>
 </head>
 
 <body>
+
 <div class="container">
 
     <div class="header">
-        <div class="title">SHARMA VAISHNOO DHABA</div>
-
+        <h1>SHARMA VAISHNOO DHABA</h1>
         <div class="tags">
             <span>Pure Veg</span>
             <span>Home-style Taste</span>
             <span>Packed & Dine-in</span>
         </div>
-
         <div class="date">Menu last updated: <b>10 Dec 2025</b></div>
     </div>
 
-    <!-- MAIN MENU -->
-    <div class="section">
-        <div class="section-title">MAIN MENU</div>
+    <!-- Main Menu -->
+    <div class="menu-box">
+        <div class="menu-title">MAIN MENU</div>
 
-        <table>
-            <tr>
-                <td><b>Kadhai Paneer</b></td>
-                <td class="price">₹ 90 / 180</td>
-            </tr>
-            <tr>
-                <td><b>Paneer Butter Masala</b></td>
-                <td class="price">₹ 90 / 180</td>
-            </tr>
-            <tr>
-                <td><b>Paneer Bhujia</b></td>
-                <td class="price">₹ 100 / 200</td>
-            </tr>
-            <tr>
-                <td><b>Shahi Paneer</b></td>
-                <td class="price">₹ 70 / 140</td>
-            </tr>
-        </table>
+        <div class="item"><span>Kadhai Paneer</span><span>₹ 90 / 180</span></div>
+        <div class="item"><span>Paneer Butter Masala</span><span>₹ 90 / 180</span></div>
+        <div class="item"><span>Paneer Bhujia</span><span>₹ 100 / 200</span></div>
+        <div class="item"><span>Shahi Paneer</span><span>₹ 70 / 140</span></div>
+    </div>
+
+    <!-- Dal -->
+    <div class="menu-box">
+        <div class="menu-title">DAL & CURRY</div>
+
+        <div class="item"><span>Dal Fry</span><span>₹ 40 / 80</span></div>
+        <div class="item"><span>Dal Tadka</span><span>₹ 50 / 100</span></div>
+        <div class="item"><span>Chole</span><span>₹ 50 / 100</span></div>
+        <div class="item"><span>Rajma</span><span>₹ 50 / 100</span></div>
+    </div>
+
+    <!-- Rice -->
+    <div class="menu-box">
+        <div class="menu-title">RICE ITEMS</div>
+
+        <div class="item"><span>Plain Rice</span><span>₹ 40 / 80</span></div>
+        <div class="item"><span>Jeera Rice</span><span>₹ 60 / 120</span></div>
+        <div class="item"><span>Veg Pulao</span><span>₹ 80 / 160</span></div>
+    </div>
+
+    <!-- Roti -->
+    <div class="menu-box">
+        <div class="menu-title">BREADS</div>
+
+        <div class="item"><span>Tawa Roti</span><span>₹ 5</span></div>
+        <div class="item"><span>Butter Roti</span><span>₹ 7</span></div>
+        <div class="item"><span>Naan</span><span>₹ 20</span></div>
+        <div class="item"><span>Butter Naan</span><span>₹ 30</span></div>
+    </div>
+
+    <!-- Drinks -->
+    <div class="menu-box">
+        <div class="menu-title">DRINKS</div>
+
+        <div class="item"><span>Cold Drink</span><span>₹ 20</span></div>
+        <div class="item"><span>Mineral Water</span><span>₹ 20</span></div>
+        <div class="item"><span>Chhachh</span><span>₹ 15</span></div>
+    </div>
+
+    <div class="footer">
+        © 2025 Sharma Vaishnoo Dhaba • Solan Bypass  
     </div>
 
 </div>
+
 </body>
 </html>
