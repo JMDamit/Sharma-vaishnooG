@@ -150,5 +150,40 @@
 
 </div>
 
+<hr>
+
+<h2 style="text-align:center;">Place Your Order</h2>
+
+<div style="max-width:400px;margin:auto;">
+<form id="orderForm">
+
+<input type="text" id="name" placeholder="Your Name" required 
+style="width:100%;padding:10px;margin:5px;"><br>
+
+<input type="tel" id="mobile" placeholder="Mobile Number" required 
+style="width:100%;padding:10px;margin:5px;"><br>
+
+<textarea id="order" placeholder="Write your order here..." required
+style="width:100%;padding:10px;margin:5px;"></textarea><br>
+
+<button type="submit" 
+style="width:100%;padding:12px;background:#28a745;color:white;border:none;font-size:16px;">
+Submit Order
+</button>
+
+</form>
+
+<p id="msg" style="text-align:center;color:green;font-weight:bold;"></p>
+</div>
+
+<script>
+document.getElementById("orderForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  document.getElementById("msg").innerHTML = 
+  "✅ Order received! We will prepare it shortly.";
+  document.getElementById("orderForm").reset();
+});
+</script>
+
 </body>
 </html>
