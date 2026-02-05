@@ -2,186 +2,170 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Sharma Vaishnoo Dhaba – Menu</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sharma Vaishno Dhaba</title>
 
 <style>
-    body{
-        margin:0;
-        font-family: "Segoe UI", Tahoma, sans-serif;
-        background: linear-gradient(#fbe9d7, #f5f0eb);
-        color:#2c2c2c;
-    }
+body{
+font-family: Arial, sans-serif;
+background:#f5f5f5;
+margin:0;
+}
 
-    .container{
-        max-width:850px;
-        margin:auto;
-        padding:15px;
-    }
+header{
+background:#ff7a00;
+color:white;
+padding:15px;
+text-align:center;
+font-size:22px;
+font-weight:bold;
+}
 
-    /* Header */
-    .header{
-        background: linear-gradient(135deg,#b71c1c,#d32f2f);
-        color:white;
-        border-radius:20px;
-        padding:30px;
-        text-align:center;
-        margin-bottom:25px;
-        box-shadow:0 4px 10px rgba(0,0,0,0.2);
-    }
-    .header h1{
-        margin:0;
-        font-size:38px;
-        letter-spacing:2px;
-    }
-    .tags span{
-        background:#ffcccb;
-        padding:8px 15px;
-        border-radius:20px;
-        margin:5px;
-        display:inline-block;
-        font-size:14px;
-        color:#7c0000;
-    }
-    .date{
-        margin-top:10px;
-        font-size:14px;
-    }
+.section{
+padding:15px;
+}
 
-    /* Menu Card */
-    .menu-box{
-        background:white;
-        padding:20px;
-        border-radius:15px;
-        margin-bottom:25px;
-        box-shadow:0 3px 10px rgba(0,0,0,0.1);
-    }
-    .menu-title{
-        font-size:24px;
-        margin-bottom:15px;
-        padding-left:10px;
-        border-left:6px solid #2ecc71;
-        font-weight:bold;
-    }
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:15px;
+}
 
-    .item{
-        display:flex;
-        justify-content:space-between;
-        padding:10px 0;
-        border-bottom:1px solid #eee;
-        font-size:18px;
-    }
+.card{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
 
-    .footer{
-        text-align:center;
-        font-size:14px;
-        margin:40px 0;
-        color:#555;
-    }
+.card img{
+width:100%;
+height:120px;
+object-fit:cover;
+}
+
+.card-content{
+padding:10px;
+text-align:center;
+}
+
+.price{
+color:#ff7a00;
+font-weight:bold;
+}
+
+.thali-box{
+background:white;
+padding:15px;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+margin-bottom:15px;
+}
+
+.order-box{
+background:white;
+padding:15px;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+input,textarea,button{
+width:100%;
+padding:10px;
+margin:6px 0;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+button{
+background:#28a745;
+color:white;
+font-size:16px;
+border:none;
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<header>Sharma Vaishno Dhaba</header>
 
-    <div class="header">
-        <h1>SHARMA VAISHNOO DHABA</h1>
-        <div class="tags">
-            <span>Pure Veg</span>
-            <span>Home-style Taste</span>
-            <span>Packed & Dine-in</span>
-        </div>
-        <div class="date">Menu last updated: <b>10 Dec 2025</b></div>
-    </div>
+<div class="section">
+<h3>🍛 Our Menu</h3>
 
-    <!-- Main Menu -->
-    <div class="menu-box">
-        <div class="menu-title">MAIN MENU</div>
+<div class="menu-grid">
 
-        <div class="item"><span>Kadhai Paneer</span><span>₹ 90 / 180</span></div>
-        <div class="item"><span>Paneer Butter Masala</span><span>₹ 90 / 180</span></div>
-        <div class="item"><span>Paneer Bhujia</span><span>₹ 100 / 200</span></div>
-        <div class="item"><span>Shahi Paneer</span><span>₹ 70 / 140</span></div>
-    </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1604908177522-4299b5e6b63c">
+<div class="card-content">
+Dal Fry<br><span class="price">₹80</span>
+</div>
+</div>
 
-    <!-- Dal -->
-    <div class="menu-box">
-        <div class="menu-title">DAL & CURRY</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1628294896516-344152572ee7">
+<div class="card-content">
+Paneer Sabzi<br><span class="price">₹120</span>
+</div>
+</div>
 
-        <div class="item"><span>Dal Fry</span><span>₹ 40 / 80</span></div>
-        <div class="item"><span>Dal Tadka</span><span>₹ 50 / 100</span></div>
-        <div class="item"><span>Chole</span><span>₹ 50 / 100</span></div>
-        <div class="item"><span>Rajma</span><span>₹ 50 / 100</span></div>
-    </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1601050690597-df0568f70950">
+<div class="card-content">
+Mix Sabzi<br><span class="price">₹90</span>
+</div>
+</div>
 
-    <!-- Rice -->
-    <div class="menu-box">
-        <div class="menu-title">RICE ITEMS</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1626078299283-d6b9a90c42d1">
+<div class="card-content">
+Roti (per piece)<br><span class="price">₹10</span>
+</div>
+</div>
 
-        <div class="item"><span>Plain Rice</span><span>₹ 40 / 80</span></div>
-        <div class="item"><span>Jeera Rice</span><span>₹ 60 / 120</span></div>
-        <div class="item"><span>Veg Pulao</span><span>₹ 80 / 160</span></div>
-    </div>
+</div>
+</div>
 
-    <!-- Roti -->
-    <div class="menu-box">
-        <div class="menu-title">BREADS</div>
+<div class="section">
+<h3>🍽️ Thaali Special</h3>
 
-        <div class="item"><span>Tawa Roti</span><span>₹ 5</span></div>
-        <div class="item"><span>Butter Roti</span><span>₹ 7</span></div>
-        <div class="item"><span>Naan</span><span>₹ 20</span></div>
-        <div class="item"><span>Butter Naan</span><span>₹ 30</span></div>
-    </div>
+<div class="thali-box">
+<strong>Roti Thaali – ₹70</strong><br>
+1 Paneer Gravy + Dal + Sookhi Sabzi + 5 Roti + Salad
+</div>
 
-    <!-- Drinks -->
-    <div class="menu-box">
-        <div class="menu-title">DRINKS</div>
-
-        <div class="item"><span>Cold Drink</span><span>₹ 20</span></div>
-        <div class="item"><span>Mineral Water</span><span>₹ 20</span></div>
-        <div class="item"><span>Chhachh</span><span>₹ 15</span></div>
-    </div>
-
-    <div class="footer">
-        © 2025 Sharma Vaishnoo Dhaba • RZI-51, West Sagarpur, Janakpuri, New Delhi - 110046
-  
-    </div>
+<div class="thali-box">
+<strong>Naan / Paratha / Laccha Thaali – ₹80</strong><br>
+1 Paneer Sabzi + Dal Makhni + Sookhi Sabzi +  
+2 Butter Stuffed Naan / Paratha / Laccha + Salad
+</div>
 
 </div>
 
-<hr>
+<div class="section">
+<h3>📦 Place Your Order</h3>
 
-<h2 style="text-align:center;">Place Your Order</h2>
-
-<div style="max-width:400px;margin:auto;">
+<div class="order-box">
 <form id="orderForm">
 
-<input type="text" id="name" placeholder="Your Name" required 
-style="width:100%;padding:10px;margin:5px;"><br>
+<input type="text" placeholder="Your Name" required>
+<input type="tel" placeholder="Mobile Number" required>
+<textarea placeholder="Write your order..." required></textarea>
 
-<input type="tel" id="mobile" placeholder="Mobile Number" required 
-style="width:100%;padding:10px;margin:5px;"><br>
-
-<textarea id="order" placeholder="Write your order here..." required
-style="width:100%;padding:10px;margin:5px;"></textarea><br>
-
-<button type="submit" 
-style="width:100%;padding:12px;background:#28a745;color:white;border:none;font-size:16px;">
-Submit Order
-</button>
+<button type="submit">Submit Order</button>
 
 </form>
 
-<p id="msg" style="text-align:center;color:green;font-weight:bold;"></p>
+<p id="msg" style="color:green;text-align:center;font-weight:bold;"></p>
+</div>
 </div>
 
 <script>
-document.getElementById("orderForm").addEventListener("submit", function(e){
-  e.preventDefault();
-  document.getElementById("msg").innerHTML = 
-  "✅ Order received! We will prepare it shortly.";
-  document.getElementById("orderForm").reset();
+document.getElementById("orderForm").addEventListener("submit",function(e){
+e.preventDefault();
+document.getElementById("msg").innerHTML="✅ Order received! Thank you.";
+this.reset();
 });
 </script>
 
