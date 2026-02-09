@@ -21,40 +21,9 @@ font-size:22px;
 font-weight:bold;
 }
 
-.section{
-padding:15px;
-}
+.section{ padding:15px; }
 
-.menu-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-gap:15px;
-}
-
-.card{
-background:white;
-border-radius:12px;
-overflow:hidden;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
-
-.card img{
-width:100%;
-height:120px;
-object-fit:cover;
-}
-
-.card-content{
-padding:10px;
-text-align:center;
-}
-
-.price{
-color:#ff7a00;
-font-weight:bold;
-}
-
-.thali-box{
+.box{
 background:white;
 padding:15px;
 border-radius:12px;
@@ -62,111 +31,123 @@ box-shadow:0 4px 10px rgba(0,0,0,0.1);
 margin-bottom:15px;
 }
 
-.order-box{
-background:white;
-padding:15px;
-border-radius:12px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
+h3{ margin-top:0; }
 
-input,textarea,button{
-width:100%;
-padding:10px;
-margin:6px 0;
-border-radius:6px;
-border:1px solid #ccc;
+.menu-item{
+display:flex;
+justify-content:space-between;
+padding:6px 0;
+border-bottom:1px dashed #ccc;
 }
+.menu-item:last-child{ border-bottom:none; }
 
-button{
+.price{ color:#ff7a00; font-weight:bold; }
+
+.big-btn{
 background:#28a745;
 color:white;
-font-size:16px;
-border:none;
+padding:15px;
+font-size:18px;
+text-align:center;
+border-radius:10px;
+font-weight:bold;
+margin-top:10px;
+cursor:pointer;
 }
 
+footer{
+background:#222;
+color:#fff;
+text-align:center;
+padding:14px;
+font-size:14px;
+line-height:1.6;
+}
+footer a{
+color:#ffb347;
+text-decoration:none;
+font-weight:bold;
+}
 </style>
 </head>
 
 <body>
 
-<header>Sharma Vaishno Dhaba</header>
+<header>Sharma Vaishno Dhaba – Pure Veg</header>
 
+<!-- FULL MENU -->
 <div class="section">
-<h3>🍛 Our Menu</h3>
+<h3>🍛 Full Menu</h3>
 
-<div class="menu-grid">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1604908177522-4299b5e6b63c">
-<div class="card-content">
-Dal Fry<br><span class="price">₹80</span>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1628294896516-344152572ee7">
-<div class="card-content">
-Paneer Sabzi<br><span class="price">₹120</span>
+<div class="box">
+<div class="menu-item"><span>Dal Fry</span><span class="price">₹80</span></div>
+<div class="menu-item"><span>Dal Makhni</span><span class="price">₹90</span></div>
+<div class="menu-item"><span>Paneer Gravy</span><span class="price">₹120</span></div>
+<div class="menu-item"><span>Dry Sabzi</span><span class="price">₹80</span></div>
+<div class="menu-item"><span>Mix Sabzi</span><span class="price">₹90</span></div>
+<div class="menu-item"><span>Roti (per piece)</span><span class="price">₹10</span></div>
 </div>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1601050690597-df0568f70950">
-<div class="card-content">
-Mix Sabzi<br><span class="price">₹90</span>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1626078299283-d6b9a90c42d1">
-<div class="card-content">
-Roti (per piece)<br><span class="price">₹10</span>
-</div>
-</div>
-
-</div>
-</div>
-
+<!-- THAALI SECTION -->
 <div class="section">
-<h3>🍽️ Thaali Special</h3>
+<h3>🍽️ Thaali Menu</h3>
 
-<div class="thali-box">
-<strong>Roti Thaali – ₹70</strong><br>
-1 Paneer Gravy + Dal + Sookhi Sabzi + 5 Roti + Salad
+<div class="box">
+<strong>🥗 Roti Thaali – ₹70</strong><br><br>
+Includes (3 Items):
+<ul>
+<li>1 Paneer Gravy</li>
+<li>1 Dal Fry / Dal Makhni</li>
+<li>1 Dry Sabzi</li>
+</ul>
+📝 <em>Items can be changed as per customer requirement.</em>
 </div>
 
-<div class="thali-box">
-<strong>Naan / Paratha / Laccha Thaali – ₹80</strong><br>
-1 Paneer Sabzi + Dal Makhni + Sookhi Sabzi +  
-2 Butter Stuffed Naan / Paratha / Laccha + Salad
+<div class="box">
+<strong>🥘 Naan / Paratha / Laccha Thaali – ₹80</strong><br><br>
+Includes (3 Items):
+<ul>
+<li>1 Paneer Gravy</li>
+<li>1 Dal Fry / Dal Makhni</li>
+<li>1 Dry Sabzi</li>
+</ul>
+📝 <em>Items can be changed as per customer requirement.</em>
+</div>
 </div>
 
-</div>
-
+<!-- BULK ORDER -->
 <div class="section">
-<h3>📦 Place Your Order</h3>
+<h3>👨‍👩‍👧‍👦 Bulk / Group Order</h3>
 
-<div class="order-box">
-<form id="orderForm">
+<div class="box">
+✅ Minimum order starting from <strong>5 People</strong><br><br>
+✔️ Family Function<br>
+✔️ Group Lunch / Dinner<br>
+✔️ Party Orders  
 
-<input type="text" placeholder="Your Name" required>
-<input type="tel" placeholder="Mobile Number" required>
-<textarea placeholder="Write your order..." required></textarea>
-
-<button type="submit">Submit Order</button>
-
-</form>
-
-<p id="msg" style="color:green;text-align:center;font-weight:bold;"></p>
+<div class="big-btn" onclick="bulkOrder()">
+📦 PLACE BULK ORDER (5+ PEOPLE)
 </div>
 </div>
+</div>
+
+<footer>
+📞 Order Food / Inquiry<br>
+<a href="tel:8368019748">8368019748</a> | 
+<a href="tel:9015473671">9015473671</a><br>
+📲 WhatsApp Available<br>
+Sharma Vaishno Dhaba – Pure Veg
+</footer>
 
 <script>
-document.getElementById("orderForm").addEventListener("submit",function(e){
-e.preventDefault();
-document.getElementById("msg").innerHTML="✅ Order received! Thank you.";
-this.reset();
-});
+function bulkOrder(){
+let text="Hello, I want to place a BULK ORDER (minimum 5 people). Please contact me.";
+window.open(
+"https://wa.me/918368019748?text="+encodeURIComponent(text),
+"_blank"
+);
+}
 </script>
 
 </body>
