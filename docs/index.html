@@ -6,16 +6,15 @@
 <title>Sharma Vaishnoo Dhaba</title>
 
 <style>
-body{font-family:Arial, sans-serif;background:#f5f5f5;margin:0}
+body{font-family:Arial,sans-serif;background:#f5f5f5;margin:0}
 header{background:#ff7a00;color:#fff;padding:15px;text-align:center;font-size:22px;font-weight:bold}
 .section{padding:15px}
-.box{background:#fff;padding:15px;border-radius:10px;box-shadow:0 4px 8px rgba(0,0,0,0.1);margin-bottom:15px}
+.box{background:#fff;padding:15px;border-radius:10px;box-shadow:0 3px 6px rgba(0,0,0,0.1);margin-bottom:15px}
 .menu-item{display:flex;justify-content:space-between;border-bottom:1px dashed #ccc;padding:6px 0}
 .menu-item:last-child{border-bottom:none}
 .price{color:#ff7a00;font-weight:bold}
-.big-btn{background:#28a745;color:#fff;padding:14px;text-align:center;border-radius:8px;font-size:17px;font-weight:bold;cursor:pointer}
+select{width:100%;padding:10px;margin:6px 0}
 footer{background:#222;color:#fff;text-align:center;padding:14px;font-size:14px}
-select{width:100%;padding:8px;margin:6px 0}
 </style>
 </head>
 
@@ -23,29 +22,28 @@ select{width:100%;padding:8px;margin:6px 0}
 
 <header>Sharma Vaishnoo Dhaba – Pure Veg</header>
 
+<!-- PANEER MENU -->
 <div class="section">
 <h3>🧀 Paneer Dishes</h3>
 <div class="box">
-<div class="menu-item"><span>Kadhai Paneer (Half/Full)</span><span class="price">₹90 / ₹180</span></div>
-<div class="menu-item"><span>Paneer Butter Masala</span><span class="price">₹90 / ₹180</span></div>
-<div class="menu-item"><span>Paneer Bhujia</span><span class="price">₹100 / ₹200</span></div>
 <div class="menu-item"><span>Shahi Paneer</span><span class="price">₹70 / ₹140</span></div>
 <div class="menu-item"><span>Matar Paneer</span><span class="price">₹70 / ₹140</span></div>
 <div class="menu-item"><span>Palak Paneer</span><span class="price">₹70 / ₹140</span></div>
+<div class="menu-item"><span>Kadhai Paneer</span><span class="price">₹90 / ₹180</span></div>
+<div class="menu-item"><span>Paneer Butter Masala</span><span class="price">₹90 / ₹180</span></div>
 </div>
 </div>
 
+<!-- DAL -->
 <div class="section">
-<h3>🍛 Dal & Gravies</h3>
+<h3>🍛 Dal</h3>
 <div class="box">
-<div class="menu-item"><span>Dal Makhni</span><span class="price">₹60 / ₹120</span></div>
 <div class="menu-item"><span>Dal Fry</span><span class="price">₹50 / ₹100</span></div>
-<div class="menu-item"><span>Rajma Masala</span><span class="price">₹60 / ₹110</span></div>
-<div class="menu-item"><span>Chana Masala</span><span class="price">₹60 / ₹110</span></div>
-<div class="menu-item"><span>Kadhi Pakora</span><span class="price">₹50 / ₹100</span></div>
+<div class="menu-item"><span>Dal Makhni</span><span class="price">₹60 / ₹120</span></div>
 </div>
 </div>
 
+<!-- DRY SABZI -->
 <div class="section">
 <h3>🥬 Dry Sabzi</h3>
 <div class="box">
@@ -55,65 +53,17 @@ select{width:100%;padding:8px;margin:6px 0}
 </div>
 </div>
 
+<!-- ROTI -->
 <div class="section">
 <h3>🫓 Roti / Naan</h3>
 <div class="box">
 <div class="menu-item"><span>Tandoori Roti</span><span class="price">₹6</span></div>
 <div class="menu-item"><span>Butter Roti</span><span class="price">₹7</span></div>
 <div class="menu-item"><span>Butter Naan</span><span class="price">₹30</span></div>
-<div class="menu-item"><span>Aloo / Laccha Paratha</span><span class="price">₹25</span></div>
-<div class="menu-item"><span>Paneer Paratha / Naan</span><span class="price">₹40</span></div>
+<div class="menu-item"><span>Laccha Paratha</span><span class="price">₹25</span></div>
 </div>
 </div>
 
-<div class="section">
-<h3>🍚 Rice</h3>
-<div class="box">
-<div class="menu-item"><span>Plain Rice</span><span class="price">₹30 / ₹60</span></div>
-<div class="menu-item"><span>Rajma Chawal</span><span class="price">₹50 / ₹100</span></div>
-<div class="menu-item"><span>Dal Chawal</span><span class="price">₹50 / ₹100</span></div>
-<div class="menu-item"><span>Chole Chawal</span><span class="price">₹50 / ₹100</span></div>
-<div class="menu-item"><span>Fried Rice</span><span class="price">₹60 / ₹110</span></div>
-</div>
-</div>
-
- <script>
-const paneerList = [
-  "Kadhai Paneer",
-  "Paneer Butter Masala",
-  "Paneer Bhujia",
-  "Shahi Paneer",
-  "Matar Paneer",
-  "Palak Paneer"
-];
-
-const dalList = [
-  "Dal Fry",
-  "Dal Makhni"
-];
-
-const drySabziList = [
-  "Aloo Gobhi",
-  "Baingan Masala",
-  "Tori"
-];
-
-function fillSelect(id, items){
-  let sel = document.getElementById(id);
-  items.forEach(item=>{
-    let opt = document.createElement("option");
-    opt.text = item;
-    sel.add(opt);
-  });
-}
-
-window.onload = function(){
-  fillSelect("paneerSelect", paneerList);
-  fillSelect("dalSelect", dalList);
-  fillSelect("drySelect", drySabziList);
-}
-</script>
- 
 <!-- THAALI -->
 <div class="section">
 <h3>🍽️ Special Thaali</h3>
@@ -121,16 +71,26 @@ window.onload = function(){
 <div class="box">
 <strong>Roti Thaali – ₹70</strong><br><br>
 
-<select id="paneerSelect">
-  <option selected disabled>Select Paneer Gravy</option>
+<select>
+<option selected disabled>Select Paneer Dish</option>
+<option>Shahi Paneer</option>
+<option>Matar Paneer</option>
+<option>Palak Paneer</option>
+<option>Kadhai Paneer</option>
+<option>Paneer Butter Masala</option>
 </select>
 
-<select id="dalSelect">
-  <option selected disabled>Select Dal</option>
+<select>
+<option selected disabled>Select Dal</option>
+<option>Dal Fry</option>
+<option>Dal Makhni</option>
 </select>
 
-<select id="drySelect">
-  <option selected disabled>Select Dry Sabzi</option>
+<select>
+<option selected disabled>Select Dry Sabzi</option>
+<option>Aloo Gobhi</option>
+<option>Baingan Masala</option>
+<option>Tori</option>
 </select>
 
 <p>📝 Items can be changed as per customer requirement</p>
@@ -139,16 +99,26 @@ window.onload = function(){
 <div class="box">
 <strong>Naan / Paratha / Laccha Thaali – ₹80</strong><br><br>
 
-<select id="paneerSelect">
-  <option selected disabled>Select Paneer Gravy</option>
+<select>
+<option selected disabled>Select Paneer Dish</option>
+<option>Shahi Paneer</option>
+<option>Matar Paneer</option>
+<option>Palak Paneer</option>
+<option>Kadhai Paneer</option>
+<option>Paneer Butter Masala</option>
 </select>
 
-<select id="dalSelect">
-  <option selected disabled>Select Dal</option>
+<select>
+<option selected disabled>Select Dal</option>
+<option>Dal Fry</option>
+<option>Dal Makhni</option>
 </select>
 
-<select id="drySelect">
-  <option selected disabled>Select Dry Sabzi</option>
+<select>
+<option selected disabled>Select Dry Sabzi</option>
+<option>Aloo Gobhi</option>
+<option>Baingan Masala</option>
+<option>Tori</option>
 </select>
 
 <p>📝 Items can be changed as per customer requirement</p>
