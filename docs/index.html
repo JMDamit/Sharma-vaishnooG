@@ -77,23 +77,80 @@ select{width:100%;padding:8px;margin:6px 0}
 </div>
 </div>
 
+ <script>
+const paneerList = [
+  "Kadhai Paneer",
+  "Paneer Butter Masala",
+  "Paneer Bhujia",
+  "Shahi Paneer",
+  "Matar Paneer",
+  "Palak Paneer"
+];
+
+const dalList = [
+  "Dal Fry",
+  "Dal Makhni"
+];
+
+const drySabziList = [
+  "Aloo Gobhi",
+  "Baingan Masala",
+  "Tori"
+];
+
+function fillSelect(id, items){
+  let sel = document.getElementById(id);
+  items.forEach(item=>{
+    let opt = document.createElement("option");
+    opt.text = item;
+    sel.add(opt);
+  });
+}
+
+window.onload = function(){
+  fillSelect("paneerSelect", paneerList);
+  fillSelect("dalSelect", dalList);
+  fillSelect("drySelect", drySabziList);
+}
+</script>
+ 
 <!-- THAALI -->
 <div class="section">
 <h3>🍽️ Special Thaali</h3>
 
 <div class="box">
 <strong>Roti Thaali – ₹70</strong><br><br>
-<select><option>Choose Paneer Sabzi</option></select>
-<select><option>Choose Dal (Fry / Makhni)</option></select>
-<select><option>Choose Dry Sabzi</option></select>
+
+<select id="paneerSelect">
+  <option selected disabled>Select Paneer Gravy</option>
+</select>
+
+<select id="dalSelect">
+  <option selected disabled>Select Dal</option>
+</select>
+
+<select id="drySelect">
+  <option selected disabled>Select Dry Sabzi</option>
+</select>
+
 <p>📝 Items can be changed as per customer requirement</p>
 </div>
 
 <div class="box">
 <strong>Naan / Paratha / Laccha Thaali – ₹80</strong><br><br>
-<select><option>Choose Paneer Sabzi</option></select>
-<select><option>Choose Dal</option></select>
-<select><option>Choose Dry Sabzi</option></select>
+
+<select id="paneerSelect">
+  <option selected disabled>Select Paneer Gravy</option>
+</select>
+
+<select id="dalSelect">
+  <option selected disabled>Select Dal</option>
+</select>
+
+<select id="drySelect">
+  <option selected disabled>Select Dry Sabzi</option>
+</select>
+
 <p>📝 Items can be changed as per customer requirement</p>
 </div>
 </div>
